@@ -20,7 +20,7 @@ pipeline {
                     curl -L "\${CLI_URL}" -o wildfly-channel-cli-executable.jar
                     
                     # Channel referencing the latest manifest published by the EAP 8 pipeline
-                    curl -s "${env.CHANNEL_URL}" -o channel.yaml
+                    curl -k -s "${env.CHANNEL_URL}" -o channel.yaml
                     """
             }
         }
